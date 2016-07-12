@@ -1,0 +1,55 @@
+/* --------------- main --------------- */
+.main {
+
+  .main__about {
+    margin-bottom: 20px;
+
+    p {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  .main__preview {
+
+  }
+
+  .main__pic {
+    text-align: center;
+
+    img { max-width: 100%; }
+  }
+}
+
+@media (min-width: $small) {
+  .main {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 0 0;
+
+    .main__about {
+      width: 200px;
+      margin-bottom: 0;
+    }
+
+    .main__preview {
+      width: 340px;
+    }
+
+    .main__pic {
+      margin: -100px 0 0 0;
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .main {
+
+  }
+}
+/* --------------- /main--------------- */

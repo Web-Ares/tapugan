@@ -1,0 +1,41 @@
+/* --------------- flash-animation --------------- */
+.flash-animation {
+  position: relative;
+  margin-bottom: 20px;
+  left: -10px;
+  width: calc(100% + 10px);
+  padding-bottom: 52.371542%;
+  background: url("../img/no_flash.jpg") no-repeat;
+  background-size: contain;
+  background-position: center left;
+
+  #falshCon,
+  #flashBanner,
+  #flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: $small) {
+  .flash-animation {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .flash-animation {
+    height: 530px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $large) {
+  .flash-animation {
+
+  }
+}
+/* --------------- /flash-animation--------------- */

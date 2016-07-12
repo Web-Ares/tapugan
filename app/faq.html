@@ -11,36 +11,10 @@
 
     <link rel="shortcut icon" href="img/favicon.ico" />
 
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/faq-page.css">
 
     <script src="js/vendors/jquery-2.1.4.min.js"></script>
-    <script src="js/vendors/swfobject.js"></script>
     <script src="js/app.min.js"></script>
-    <script type="text/javascript">
-
-        var flashvars = {};
-        var params = {};
-        params.scale = "noscale";
-        params.menu = "false";
-        params.salign = "rt";
-        params.allowFullScreen = "true";
-        params.quality="best";
-        params.devicefont="false";
-        params.allowScriptAccess="always";
-        params.wmode="transparent";
-
-        var attributes = {};
-
-        swfobject.embedSWF('includes/tapugan_preloader.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
-
-        function checkWidth(){
-            var windowWidth = parseInt(document.documentElement.clientWidth);
-            if (windowWidth < 1000){
-                document.body.style.overflow="auto";
-                document.getElementById('flashBanner').style.width = 1012+'px';
-            }
-        }
-    </script>
 
 </head>
 <body>
@@ -52,7 +26,7 @@
     <header class="site__header">
 
         <!-- logo -->
-        <h1 class="logo"><img src="img/logo.png" alt="תפוגן"></h1>
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="תפוגן"></a>
         <!-- /logo -->
 
         <!-- menu -->
@@ -98,16 +72,7 @@
     </header>
     <!-- /site__header -->
 
-    <!-- flash-animation -->
-    <div class="flash-animation">
-        <div id="falshCon">
-            <div id="flashBanner">
-                <div id="flash"></div>
-            </div>
-        </div>
-
-    </div>
-    <!-- /flash-animation -->
+    <div class="site__ban" style="background-image: url(img/no_flash.jpg)"></div>
 
     <!-- site__content -->
     <div class="site__content">
