@@ -1,0 +1,120 @@
+/* --------------- product --------------- */
+.product {
+
+
+  .product__title {
+    display: block;
+    font-size: 24px;
+    color: #35a2cb;
+    line-height: 35px;
+    font-weight: 700;
+  }
+
+  .product__pic {
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background-color: #ffffff;
+    border: 1px solid #d6cfc5;
+    text-align: center;
+
+    img { max-width: 100%; }
+  }
+
+  .product__info {
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #35a2cb;
+    }
+
+    dl {
+
+      &:last-child { margin-bottom: 10px; }
+
+      dt {
+        display: inline;
+        font-weight: 700;
+      }
+
+      dd { display: inline; }
+    }
+
+    .product__info-title {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #d11b1c;
+      line-height: 25px;
+      font-weight: 700;
+    }
+
+    .product__info-shot {
+      display: flex;
+      align-items: flex-start;
+
+      div {
+        width: 200px;
+      }
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 10px;
+      background-color: #ffffff;
+
+      thead td {
+        background: #0477a4;
+        background: -moz-linear-gradient(top,  #0477a4 0%, #2e9bc4 100%);
+        background: -webkit-linear-gradient(top,  #0477a4 0%,#2e9bc4 100%);
+        background: linear-gradient(to bottom,  #0477a4 0%,#2e9bc4 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0477a4', endColorstr='#2e9bc4',GradientType=0 );
+        color: #ffffff;
+      }
+
+      tr {
+
+      }
+
+      td {
+        vertical-align: middle;
+        height: 41px;
+        width: 50%;
+        padding: 5px 10px;
+        border: 1px solid #e3e3e3;
+      }
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .product {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .product__title { width: 100% }
+
+    .product__pic { margin: 0 0 0 30px; }
+
+    .product__info {
+
+      table { max-width: 395px; }
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .product {
+
+  }
+}
+/* --------------- /product--------------- */
