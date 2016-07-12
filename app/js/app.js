@@ -10,21 +10,35 @@ $(function(){
 
     });
 
-    var Menu = function ( obj ) {
+    var Menu = function(obj) {
 
         //private properties
-        var _self = this,
-            _obj = obj;
+        var _obj = obj,
+            _btn = _obj.find( '.menu__btn' ),
+            _window = $(window);
 
         //private methods
-        var _addEvents = function () {
+        var _addEvents = function() {
+
+                _btn.on({
+                    'click': function() {
+
+                        if ( !_obj.hasClass( 'active' ) ) {
+                            _obj.addClass( 'active' );
+                        } else {
+                            _obj.removeClass( 'active' );
+                        }
+                    }
+                });
 
             },
-            _init = function () {
-
+            _init = function() {
                 _addEvents();
-
             };
+
+        //public properties
+
+        //public methods
 
         _init();
     };

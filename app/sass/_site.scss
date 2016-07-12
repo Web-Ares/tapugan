@@ -20,7 +20,7 @@ body {
 
   .site__header {
 	position: relative;
-//	height: 70px;
+	height: 130px;
 	z-index: 3;
   }
 
@@ -83,6 +83,14 @@ body {
 	}
   }
 
+  .site__ban {
+	display: block;
+	height: 275px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 -10px;
+  }
+
   .site__title {
 	display: block;
 	margin-bottom: 10px;
@@ -113,10 +121,6 @@ body {
 
 	&:hover { color: #467a00; }
   }
-
-  .site__ban {
-	background-size: contain;
-  }
 }
 
 @media (min-width: $small) {
@@ -143,6 +147,10 @@ body {
 
 	.site__header {
 	  padding: 0 calc(50% - 500px);
+	}
+
+	.site__ban {
+	  margin: -80px 0 0 0;
 	}
 
 	.site__content {
