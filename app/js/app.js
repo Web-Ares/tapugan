@@ -18,7 +18,8 @@ $(function(){
         var _obj = obj,
             flashvars = {},
             params = {},
-            attributes = {};;
+            attributes = {},
+            currentPath = obj.attr("data-path");
 
         //private methods
         var _addEvents = function() {
@@ -26,7 +27,7 @@ $(function(){
             },
             _init = function() {
                 _addEvents();
-                swfobject.embedSWF('home.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
+                swfobject.embedSWF(currentPath+'home.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
             };
 
         //public properties
