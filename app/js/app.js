@@ -8,7 +8,9 @@ $(function(){
             new HomeFlash($(this));
         });
 
-
+        $(document).on('mailsent.wpcf7', function () {
+            $( '.site__content').addClass( 'contact-send' );
+        });
 
     });
 

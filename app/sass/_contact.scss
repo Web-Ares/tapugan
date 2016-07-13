@@ -128,3 +128,12 @@
   }
 }
 /* --------------- /contact --------------- */
+
+.thank-you { display: none; }
+
+.contact-send {
+
+  .contact { display: none; }
+
+  .thank-you { display: block; }
+}
