@@ -29,7 +29,7 @@ $(function(){
                 _addEvents();
                 params.wmode="transparent";
 
-                swfobject.embedSWF('home.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
+                swfobject.embedSWF(currentPath + 'home.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
             };
 
         //public properties
