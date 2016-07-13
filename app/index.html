@@ -31,7 +31,7 @@
 
         var attributes = {};
 
-        swfobject.embedSWF('includes/tapugan_preloader.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
+        swfobject.embedSWF('home.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
 
         function checkWidth(){
             var windowWidth = parseInt(document.documentElement.clientWidth);
@@ -73,15 +73,22 @@
     </header>
     <!-- /site__header -->
 
-    <!-- flash-animation -->
-    <div class="flash-animation">
-        <div id="falshCon">
-            <div id="flashBanner">
-                <div id="flash"></div>
-            </div>
-        </div>
-
+    <div class="site__ban" style="background-image: url(img/no_flash.jpg); height: auto; padding-bottom: 20%;">
+        <object type="application/x-shockwave-flash" data="home.swf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%">
+            <param name="movie" value="home.swf">
+            <param name="wmode" value="transparent">
+        </object>
     </div>
+
+    <!-- flash-animation -->
+    <!--<div class="flash-animation">-->
+        <!--<div id="falshCon">-->
+            <!--<div id="flashBanner">-->
+                <!--<div id="flash"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
     <!-- /flash-animation -->
 
     <!-- site__content -->
