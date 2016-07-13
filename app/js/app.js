@@ -8,6 +8,8 @@ $(function(){
             new HomeFlash($(this));
         });
 
+
+
     });
 
     var HomeFlash = function(obj) {

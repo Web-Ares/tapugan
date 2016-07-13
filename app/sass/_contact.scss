@@ -59,6 +59,12 @@
       visibility: hidden;
       color: #d11b1c;
     }
+
+    .wpcf7-not-valid-tip {
+      display: block;
+      height: 20px;
+      color: #d11b1c;
+    }
   }
 }
 
@@ -91,6 +97,12 @@
       }
 
       .contact__form-error {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      .wpcf7-not-valid-tip {
         display: inline-block;
         vertical-align: middle;
         margin-right: 10px;
