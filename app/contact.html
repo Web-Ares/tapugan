@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta charset="UTF-8">
+
+    <title>תפוגן</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <link rel="stylesheet" href="css/contact-page.css">
+
+    <script src="js/vendors/jquery-2.1.4.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script type="text/javascript">
+        function isEmpty() {
+            strfield1 = document.forms[0].name1.value;
+            strfield2 = document.forms[0].company.value;
+            strfield3 = document.forms[0].email.value;
+            strfield4 = document.forms[0].phone.value;
+            strfield5 = document.forms[0].msg.value;
+            var name;
+            var last;
+            var phone;
+            var mail;
+            var comment = true;
+            var stripped = strfield4.replace(/[\(\)\.\-\ ]/g, '');
+            validRegExp = /^[^@]+@[^@]+.[a-z]{2,}$/i;
+            strEmail = document.forms[0].email.value;
+            if (strfield1 == "" || strfield1 == null || !isNaN(strfield1) || strfield1.charAt(0) == ' ')
+            {
+                ChangeTitle('name_error');
+                name=false;
+            }else{
+                name=true;
+                elemTitle('name_error');
+            }
+            if (strfield2 == "" || strfield2 == null || !isNaN(strfield2) || strfield2.charAt(0) == ' ')
+            {
+                ChangeTitle('last_error');
+                last=false;
+            }else{
+                last=true;
+                elemTitle('last_error');
+            }
+            if (strEmail.search(validRegExp) == -1)
+            {
+                ChangeTitle('mail_error');
+                mail=false;
+            } else{
+                mail=true;
+                elemTitle('mail_error');
+            }
+
+            if (strfield4 == "" || strfield4 == null || strfield4.charAt(0) == ' ')
+            {
+                ChangeTitle('phone_error');
+                phone=false;
+            }else{
+                phone=true;
+                elemTitle('phone_error');
+            }
+
+            if(name==true && last==true && phone==true && mail==true && comment==true){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        function check(form){
+            if (isEmpty()){
+                document.getElementById('tofes').action="form.aspx";
+                return true;
+            }
+            return false;
+        }
+        function ChangeTitle(whatToWrite) {
+
+            var head1 = document.getElementById(whatToWrite);
+            head1.style.visibility = "visible";
+        }
+        function elemTitle(whatToWrite) {
+
+            var head1 = document.getElementById(whatToWrite);
+            head1.style.visibility = "hidden";
+        }
+        function hideAll(){
+            document.getElementById("name_error").style.visibility = "hidden";
+            document.getElementById("last_error").style.visibility = "hidden";
+            document.getElementById("mail_error").style.visibility = "hidden";
+            document.getElementById("phone_error").style.visibility = "hidden";
+        }
+    </script>
+
+
+</head>
+<body>
+
+<!-- site -->
+<div class="site">
+
+    <!-- site__header -->
+    <header class="site__header">
+
+        <!-- logo -->
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="תפוגן"></a>
+        <!-- /logo -->
+
+        <!-- menu -->
+        <nav class="menu">
+
+            <!-- menu__btn -->
+            <span class="menu__btn"></span>
+            <!-- /menu__btn -->
+
+            <!-- menu__wrap -->
+            <div class="menu__wrap">
+
+                <!-- menu__item -->
+                <a href="about.html" class="menu__item" titile="אודות תפוגן">אודות תפוגן</a>
+                <!-- /menu__item -->
+
+                <!-- menu__item -->
+                <a href="category.html" class="menu__item" titile="צ'יפס">צ'יפס</a>
+                <!-- /menu__item -->
+
+                <!-- menu__item -->
+                <a href="specials.html" class="menu__item" titile="מיוחדים">מיוחדים</a>
+                <!-- /menu__item -->
+
+                <!-- menu__item -->
+                <a href="vegetation.html" class="menu__item" titile="מן הצומח">מן הצומח</a>
+                <!-- /menu__item -->
+
+                <!-- menu__item -->
+                <a href="faq.html" class="menu__item" titile="שאלות ותשובות">שאלות ותשובות</a>
+                <!-- /menu__item -->
+
+                <!-- menu__item -->
+                <a href="index.html" class="menu__item" titile="homeי">home</a>
+                <!-- /menu__item -->
+
+            </div>
+            <!-- /menu__wrap -->
+
+        </nav>
+        <!-- /menu -->
+
+    </header>
+    <!-- /site__header -->
+
+    <div class="site__ban" style="background-image: url(img/faq_img.jpg)"></div>
+
+    <!-- site__content -->
+    <div class="site__content">
+
+        <!-- site__title -->
+        <h1 class="site__title">צור קשר</h1>
+        <!-- /site__title -->
+
+        <!-- contact -->
+        <div class="contact">
+
+            <p>ניתן לפנות אלינו בכל נושא. אנו מתחייבים על מענה בהקדם.</p>
+
+            <div class="contact__info">
+                <p>
+                    <strong>כתובת המפעל:</strong>
+                    תעשיות תפוגן &nbsp;|&nbsp; שער הנגב ת.ד 571 &nbsp;|&nbsp; שדרות 8701402
+                </p>
+                <p><strong>טלפון:</strong> 08-6808331</p>
+                <p><strong>שירות לקוחות:</strong> 08-6108800</p>
+            </div>
+
+            <form id="tofes" method="post">
+                <fieldset>
+                    <label class="label"><sup>*</sup>שם פרטי</label>
+                    <input type="text" id="contact1" name="name1" class="mod_input" onkeypress="hideAll()">
+                    <span id="name_error" class="contact__form-error"><sup>*</sup>שדה חובה</span>
+                </fieldset>
+
+                <fieldset>
+                    <label class="label"><sup>*</sup>שם משפחה</label>
+                    <input type="text" id="contact2" name="company" class="mod_input" onkeypress="hideAll()">
+                    <span id="last_error" class="contact__form-error"><sup>*</sup>שדה חובה</span>
+                </fieldset>
+
+                <fieldset>
+                    <label class="label"><sup>*</sup>דוא"ל</label>
+                    <input type="text" id="contact3" name="email" class="mod_input" onkeypress="hideAll()">
+                    <span id="mail_error" class="contact__form-error"><sup>*</sup>שדה חובה</span>
+                </fieldset>
+
+                <fieldset>
+                    <label class="label"><sup>*</sup>טלפון</label>
+                    <input type="text" id="contact4" name="phone" class="mod_input" onkeypress="hideAll()">
+                    <span id="phone_error" class="contact__form-error"><sup>*</sup>שדה חובה</span>
+                </fieldset>
+
+                <fieldset>
+                    <label class="label">הערות</label>
+                    <textarea class="mod_text" id="contact5" name="msg" onkeypress="hideAll()"></textarea>
+                </fieldset>
+
+                <span class="contact__form-comment"><sup>*</sup>עליך למלא את כל השדות</span>
+
+                <button type="submit" id="send" class="btn-send" onclick="return check(this)" onmouseover="sendover()" onmouseout="sendout()"></button>
+            </form>
+        </div>
+        <!-- /contact -->
+
+    </div>
+    <!-- /site__content -->
+
+    <!-- site__footer -->
+    <footer class="site__footer">
+
+        <!-- site__create -->
+        <div class="site__create">designed by <a href="http://san-i.co.il" target="_blank">san interactive</a></div>
+        <!-- /site__create -->
+
+        <!-- site__footer-menu -->
+        <nav class="site__footer-menu">
+            <a href="index.html" class="site__footer-menu__item">עמוד ראשי</a>
+            <a href="about.html" class="site__footer-menu__item">אודות תפוגן</a>
+            <a href="category.html" class="site__footer-menu__item">צ'יפס</a>
+            <a href="specials.html" class="site__footer-menu__item">מיוחדים</a>
+            <a href="vegetation.html" class="site__footer-menu__item">מן הצומח</a>
+            <a href="faq.html" class="site__footer-menu__item">שאלות ותשובות</a>
+            <a href="contact.html" class="site__footer-menu__item">צור קשר</a>
+        </nav>
+        <!-- /site__footer-menu -->
+
+        <!-- site__copyright -->
+        <div class="site__copyright"><a href="terms.html">תנאי שימוש</a> © 2010  כל הזכויות שמורות לתפוגן בע"מ</div>
+        <!-- /site__copyright -->
+
+    </footer>
+    <!-- /site__footer -->
+
+</div>
+<!-- /site -->
+
+</body>
+</html>
