@@ -8,7 +8,7 @@ body {
   justify-content: space-between;
   overflow: hidden;
   position: relative;
-  padding: 10px;
+  padding: 0 10px 10px;
   z-index: 1;
   min-width: 320px;
   min-height: 100vh;
@@ -20,8 +20,9 @@ body {
 
   .site__header {
 	position: relative;
-	height: 130px;
+	padding-bottom: 12%;
 	z-index: 3;
+	min-height: 140px;
   }
 
   .site__content {
@@ -34,11 +35,12 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px;
+	padding: 10px 0;
 	font-size: 10px;
 
 	.site__footer-menu {
-	  padding: 10px;
+	  padding: 10px 0;
+	  text-align: center;
 	  cursor: default;
 
 	  a,
@@ -85,6 +87,7 @@ body {
 
   .site__ban {
 	display: block;
+	position: relative;
 	height: 275px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -127,7 +130,7 @@ body {
   .site {
 
 	.site__header {
-
+	  padding: 0 0 0 20%;
 	}
 
 	.site__content {
@@ -138,6 +141,9 @@ body {
 
 	}
 
+	.site__ban {
+	  margin-top: -50px;
+	}
   }
 }
 
@@ -146,6 +152,8 @@ body {
 	padding: 0;
 
 	.site__header {
+	  display: flex;
+	  justify-content: space-between;
 	  padding: 0 calc(50% - 500px);
 	}
 

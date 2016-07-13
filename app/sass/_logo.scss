@@ -1,13 +1,21 @@
 /* --------------- logo --------------- */
 .logo {
-  @include absoluteCenter();
+  @include absoluteCenterX();
+  bottom: 0;
 
-  img { display: block; }
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 @media (min-width: $small) {
   .logo {
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    transform: translate(0,0);
   }
 }
 
