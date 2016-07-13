@@ -92,6 +92,17 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: 0 -10px;
+
+	&.site__ban_flash {
+	  height: auto;
+	  padding-bottom: 52.371542%;
+	  margin-bottom: 10px;
+	  background-image: url('../img/no_flash.jpg');
+	  background-size: contain;
+	  background-position: left center;
+
+	  object { display: none; }
+	}
   }
 
   .site__title {
@@ -159,6 +170,12 @@ body {
 
 	.site__ban {
 	  margin: -80px 0 0 0;
+
+	  &.site__ban_flash {
+		height: 488px;
+		padding: 0;
+		text-align: left;
+	  }
 	}
 
 	.site__content {
@@ -186,6 +203,15 @@ body {
 
 	.site__footer {
 
+	}
+
+	.site__ban {
+
+	  &.site__ban_flash {
+		background-image: none;
+
+		object { display: inline-block; }
+	  }
 	}
   }
 }
