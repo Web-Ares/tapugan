@@ -26,6 +26,8 @@ $(function(){
             },
             _init = function() {
                 _addEvents();
+                params.wmode="transparent";
+
                 swfobject.embedSWF('home.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
             };
 

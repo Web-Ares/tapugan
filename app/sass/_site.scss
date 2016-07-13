@@ -97,6 +97,7 @@ body {
 	  height: auto;
 	  padding-bottom: 52.371542%;
 	  margin-bottom: 10px;
+	  background-color: #f7f4ed;
 	  background-image: url('../img/no_flash.jpg');
 	  background-size: contain;
 	  background-position: left center;
@@ -208,7 +209,7 @@ body {
 	.site__ban {
 
 	  &.site__ban_flash {
-		background-image: none;
+		background: $site-bg;
 
 		object { display: inline-block; }
 	  }
