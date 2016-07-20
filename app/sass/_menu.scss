@@ -1,7 +1,7 @@
 /* --------------- menu --------------- */
 .menu {
   position: relative;
-  padding-bottom: 35%;
+  padding-bottom: 20%;
   z-index: 2;
 
   object {
@@ -35,7 +35,6 @@
     display: block;
     overflow: hidden;
     position: relative;
-    top: -10px;
     text-indent: -1000px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -73,12 +72,10 @@
       overflow: visible;
 
       &:before {
-        top: 10px;
         opacity: 0;
       }
 
       &:after {
-        top: 10px;
         opacity: 1;
       }
 
@@ -94,8 +91,7 @@
       &:after { background-image: url("../img/nav6h.png"); }
 
       .menu__rain {
-        //top: 45%;
-        top: 80%;
+        top: 75%;
 
         &:before { background-image: url("../img/rain/rain1.png"); }
       }
@@ -108,10 +104,9 @@
       &:after { background-image: url("../img/nav1h.png"); }
 
       .menu__rain {
-        //top: 30%;
-        top: 55%;
+        top: 50%;
 
-        &:before { background-image: url("../img/rain/rain1.png"); }
+        &:before { background-image: url("../img/rain/rain2.png"); }
       }
     }
 
@@ -122,10 +117,9 @@
       &:after { background-image: url("../img/nav5h.png"); }
 
       .menu__rain {
-        //top: 45%;
-        top: 80%;
+        top: 75%;
 
-        &:before { background-image: url("../img/rain/rain1.png"); }
+        &:before { background-image: url("../img/rain/rain3.png"); }
       }
     }
 
@@ -136,8 +130,7 @@
       &:after { background-image: url("../img/nav3h.png"); }
 
       .menu__rain {
-        //top: 30%;
-        top: 55%;
+        top: 50%;
 
         &:before { background-image: url("../img/rain/rain4.png"); }
       }
@@ -150,8 +143,7 @@
       &:after { background-image: url("../img/nav4h.png"); }
 
       .menu__rain {
-        //top: 52%;
-        top: 80%;
+        top: 75%;
 
         &:before { background-image: url("../img/rain/rain5.png"); }
       }
@@ -164,10 +156,9 @@
       &:after { background-image: url("../img/nav2h.png"); }
 
       .menu__rain {
-        //top: 35%;
-        top: 60%;
+        top: 55%;
 
-        &:before { background-image: url("../img/rain/rain1.png"); }
+        &:before { background-image: url("../img/rain/rain6.png"); }
       }
     }
   }
@@ -175,10 +166,9 @@
   &__rain {
     overflow: hidden;
     position: absolute;
-    right: 20px;
-    //bottom: 0;
-    bottom: -45%;
-    left: 10px;
+    right: 12%;
+    bottom: -195%;
+    left: 6%;
     z-index: 1;
 
     &:before {
@@ -199,15 +189,28 @@
 @media (min-width: $small) {
   .menu {
 
+    &__item {
+      top: -10px;
+
+      &:hover {
+
+        &:before { top: 10px; }
+
+        &:after { top: 10px; }
+      }
+    }
+
+    &__rain { bottom: -120%; }
   }
 }
 
 @media (min-width: $medium) {
   .menu {
     width: 792px;
-    //height: 214px;
     height: 150px;
     padding: 0;
+
+    &__rain { bottom: -45%; }
   }
 }
 
