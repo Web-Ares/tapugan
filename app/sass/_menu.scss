@@ -4,24 +4,6 @@
   padding-bottom: 20%;
   z-index: 2;
 
-  object {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    a:nth-child(3) { width: 22.474747%; }
-    a:nth-child(4) { width: 16.035354%; }
-    a:nth-child(5) { width: 14.141414%; }
-    a:nth-child(6) { width: 15.656566%; }
-    a:nth-child(7) { width: 20.20202%; }
-    a:nth-child(8) { width: 11.489899%; }
-
-    a img { width: 100%; }
-  }
-
   &__wrap {
     display: flex;
     position: absolute;
