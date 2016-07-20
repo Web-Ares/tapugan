@@ -1,7 +1,7 @@
 /* --------------- menu --------------- */
 .menu {
   position: relative;
-  padding-bottom: 27%;
+  padding-bottom: 35%;
   z-index: 2;
 
   object {
@@ -20,6 +20,171 @@
     a:nth-child(8) { width: 11.489899%; }
 
     a img { width: 100%; }
+  }
+
+  &__wrap {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    top: -10px;
+    text-indent: -1000px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all .3s ease;
+      content: '';
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: all .3s ease;
+      content: '';
+    }
+
+    &:hover {
+
+      &:before {
+        top: 10px;
+        opacity: 0;
+      }
+
+      &:after {
+        top: 10px;
+        opacity: 1;
+      }
+
+      .menu__rain:before {
+        animation: rain 2s linear forwards;
+      }
+    }
+
+    &_1 {
+      width: 22.474747%;
+
+      &:before { background-image: url("../img/nav6.png"); }
+      &:after { background-image: url("../img/nav6h.png"); }
+
+      .menu__rain {
+        top: 45%;
+
+        &:before { background-image: url("../img/rain/rain1.png"); }
+      }
+    }
+
+    &_2 {
+      width: 16.035354%;
+
+      &:before { background-image: url("../img/nav1.png"); }
+      &:after { background-image: url("../img/nav1h.png"); }
+
+      .menu__rain {
+        top: 30%;
+
+        &:before { background-image: url("../img/rain/rain1.png"); }
+      }
+    }
+
+    &_3 {
+      width: 14.141414%;
+
+      &:before { background-image: url("../img/nav5.png"); }
+      &:after { background-image: url("../img/nav5h.png"); }
+
+      .menu__rain {
+        top: 45%;
+
+        &:before { background-image: url("../img/rain/rain1.png"); }
+      }
+    }
+
+    &_4 {
+      width: 15.656566%;
+
+      &:before { background-image: url("../img/nav3.png"); }
+      &:after { background-image: url("../img/nav3h.png"); }
+
+      .menu__rain {
+        top: 30%;
+
+        &:before { background-image: url("../img/rain/rain1.png"); }
+      }
+    }
+
+    &_5 {
+      width: 20.20202%;
+
+      &:before { background-image: url("../img/nav4.png"); }
+      &:after { background-image: url("../img/nav4h.png"); }
+
+      .menu__rain {
+        top: 52%;
+
+        &:before { background-image: url("../img/rain/rain1.png"); }
+      }
+    }
+
+    &_6 {
+      width: 11.489899%;
+
+      &:before { background-image: url("../img/nav2.png"); }
+      &:after { background-image: url("../img/nav2h.png"); }
+
+      .menu__rain {
+        top: 35%;
+
+        &:before { background-image: url("../img/rain/rain1.png"); }
+      }
+    }
+  }
+
+  &__rain {
+    overflow: hidden;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 10px;
+    z-index: 1;
+
+    &:before {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      opacity: 0;
+      background-size: 100% auto;
+      background-repeat: repeat-y;
+      content: '';
+    }
   }
 }
 
@@ -43,3 +208,33 @@
   }
 }
 /* --------------- /menu --------------- */
+
+@-webkit-keyframes rain {
+  from {
+    opacity: 0;
+    bottom: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    bottom: -300%;
+    opacity: 0;
+  }
+}
+@keyframes rain {
+  from {
+    opacity: 0;
+    bottom: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    bottom: -300%;
+    opacity: 0;
+  }
+}

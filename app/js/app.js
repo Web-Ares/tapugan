@@ -4,8 +4,8 @@ $(function(){
 
     $(function() {
 
-        $('.site__ban_flash').each(function () {
-            new HomeFlash($(this));
+        $('.mountains').each(function () {
+            new Mountains($(this));
         });
 
         $(document).on('mailsent.wpcf7', function () {
@@ -14,24 +14,37 @@ $(function(){
 
     });
 
-    var HomeFlash = function(obj) {
+    var Mountains = function(obj) {
 
         //private properties
         var _obj = obj,
-            flashvars = {},
-            params = {},
-            attributes = {},
-            currentPath = obj.attr("data-path");
+            _window = $( 'body' ),
+            _mountain = _obj.find( '.mountains__mountain' ),
+            _potatoes = _obj.find( '.mountains__potatoes' );
 
         //private methods
         var _addEvents = function() {
 
-            },
-            _init = function() {
-                _addEvents();
-                params.wmode="transparent";
+            _obj.on( {
+                'mousemove': function (e) {
+                    var x = e.pageX,
+                        y = e.pageY;
 
-                swfobject.embedSWF(currentPath + 'home.swf', "flash", "1525", "530", "10",false, flashvars, params, attributes);
+                    _paralax( _mountain, 0, y, 0.02);
+                    _paralax( _potatoes, 0, y, 0.04);
+                }
+            });
+
+            },
+            _paralax = function( elem, x, y, koef ) {
+                var translate = 'translate3d(' + Math.round(x*koef) + 'px, ' + Math.round(y*koef) + 'px, 0px )';
+
+                elem.css( {
+                    'transform': translate
+                } );
+            },
+            _init = function(e) {
+                _addEvents();
             };
 
         //public properties
