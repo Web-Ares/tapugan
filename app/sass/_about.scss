@@ -10,6 +10,24 @@
     font-weight: 700;
   }
 
+  h3 {
+    text-decoration: underline;
+  }
+
+
+  dl {
+
+    &:last-child { margin-bottom: 10px; }
+
+    dt {
+      display: inline;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    dd { display: inline; }
+  }
+
   ul {
     list-style-image: url(../img/bullet.png);
     margin: 0 14px 15px 0;
