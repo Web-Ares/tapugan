@@ -129,6 +129,7 @@ body {
 	padding-right: 20px;
 	background: url("../img/link_icon.png") no-repeat right;
 	color: #d11b1c;
+	  text-decoration: underline;
 	transition: color .3s ease;
 
 	&:visited { color: #d11b1c; }
