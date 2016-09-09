@@ -3,6 +3,9 @@ $(function(){
 
     $(function() {
 
+        $('.menu').each( function() {
+            new Menu( $(this) );
+        } );
 
         $('.mountains').each(function () {
             new Mountains($(this));
@@ -17,6 +20,29 @@ $(function(){
         });
 
     });
+
+    var Menu = function( obj ) {
+
+        //private properties
+        var _obj = obj,
+            _btn = _obj.find( '.menu__btn' );
+
+        //private methods
+        var _addEvents = function() {
+                _btn.on( {
+                    click: function() {
+
+                        _obj.toggleClass( 'menu_open' );
+
+                    }
+                } );
+            },
+            _init = function() {
+                _addEvents();
+            };
+
+        _init();
+    };
 
     var Mountains = function(obj) {
 
